@@ -17,11 +17,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
     defaultConfig {
         applicationId "org.chromium.twa.svgomg"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -36,7 +36,7 @@ android {
                 // https://developers.google.com/web/updates/2017/10/using-twa#set_up_digital_asset_links_in_an_android_app
                 // and is injected into the AndroidManifest.xml
                 assetStatements: '[{ "relation": ["delegate_permission/common.handle_all_urls"], ' +
-                        '"target": {"namespace": "twa", "site": "https://mweb-demos.appspot.com"}}]'
+                        '"target": {"namespace": "web", "site": "https://svgomg.firebaseapp.com"}}]'
         ]
     }
     buildTypes {
@@ -53,12 +53,11 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-  //  implementation 'com.android.support:appcompat-v7:28.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
- //   implementation group: 'com.android.support', name: 'customtabs', version: '3a71a75c9f'
-    implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:3a71a75c9f'
+    compile group: 'com.android.support', name: 'customtabs', version: '27.1.1'
 
 }

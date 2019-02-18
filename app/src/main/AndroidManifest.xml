@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="test.com.twa_sample">
+    package="com.innovativedemoapps.twa.sample">
 
     <application
         android:allowBackup="true"
@@ -21,6 +21,10 @@
         </activity>
 
        -->
+
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
 
         <activity android:name="android.support.customtabs.trusted.LauncherActivity"
             android:label="${launcherName}">
